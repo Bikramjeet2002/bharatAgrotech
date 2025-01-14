@@ -6,6 +6,7 @@ import Product from "../pages/product/Product";
 import About from "../pages/about/About";
 import ProductDetails from "../pages/product/ProductDetails";
 import Contact from "../pages/contact/Contact";
+import Testimonial from "../pages/Testimonial/Testimonial";
 
 function RouteManager() {
   return (
@@ -17,6 +18,7 @@ function RouteManager() {
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/testimonial" element={<Testimonial/>} />
         </Route>
       </Routes>
     </>

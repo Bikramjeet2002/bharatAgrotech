@@ -41,10 +41,17 @@ export default function Navbar() {
           <div className="mx-auto py-6  max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16  items-center  justify-between">
               <div className="shrink-0 flex sm:text-center ">
-                <div className="align-middle">
+                <div className="align-middle hidden md:block">
                   <img
                     alt="Your Company"
                     src="/logo/invert.png"
+                    className="size-20 px-1"
+                  />
+                </div>
+                <div className="align-middle md:hidden">
+                  <img
+                    alt="Your Company"
+                    src="/logo/Batlogo.png"
                     className="size-20 px-1"
                   />
                 </div>

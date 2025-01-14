@@ -20,18 +20,10 @@ const Home = () => {
       <div>
         <div className="max-w-7xl mx-auto px-4 py-12 flex flex-col md:flex-row gap-8 md:gap-16">
           <div className="flex-1 hidden sm:grid grid-cols-2 gap-4">
-            <div className="col-span-2">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-jxmgkKxIWLo3bY9OqaxeSHLjjsF18Z.png"
-                alt="Tractor tire"
-                width={600}
-                height={300}
-                className="rounded-lg object-cover w-full h-[300px]"
-              />
-            </div>
+            
             <div className="h-[200px]">
-              <Image
-                src="/placeholder.svg?height=200&width=300"
+              <img
+                src="/home/t2.jpg"
                 alt="Tractor in sunset"
                 width={300}
                 height={200}
@@ -39,8 +31,8 @@ const Home = () => {
               />
             </div>
             <div className="h-[200px]">
-              <Image
-                src="/placeholder.svg?height=200&width=300"
+              <img
+                src="/home/plow.jpg"
                 alt="Warehouse"
                 width={300}
                 height={200}
@@ -48,8 +40,8 @@ const Home = () => {
               />
             </div>
             <div className="col-span-2 h-[250px]">
-              <Image
-                src="/placeholder.svg?height=250&width=600"
+              <img
+                src="/home/main.jpg"
                 alt="Tractor in field"
                 width={600}
                 height={250}
@@ -64,7 +56,7 @@ const Home = () => {
               <span className="block text-[#FF5722]">BHARAT AGRO TECH</span>
             </h1>
 
-            <div className="space-y-6 text-gray-600">
+            <div className="space-y-3 my-0 text-gray-600">
               <p>
                 BHARAT AGRO TECH was established in 2020 by S. Ravinder Singh
                 Padam with the support of Sh. Ajay Goyal, Sh. Gagandeep Jain and
@@ -85,12 +77,12 @@ const Home = () => {
               </p>
             </div>
 
-            <button className="bg-[#FF5722] hover:bg-[#F4511E] text-white font-bold py-3 px-8 rounded transition duration-300 ease-in-out w-fit">
+            <button className="bg-[#FF5722] hover:bg-[#F4511E] text-white  font-bold py-3 px-8 rounded transition duration-300 ease-in-out w-fit">
               READ MORE
             </button>
 
             <div className="absolute right-0 bottom-0 opacity-5 pointer-events-none">
-              <Image
+              <img
                 src="/placeholder.svg?height=400&width=400"
                 alt="Decorative farm equipment illustration"
                 width={400}

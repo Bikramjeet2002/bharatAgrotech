@@ -4,6 +4,29 @@ import Navbar from "../../components/Navbar";
 import { Image } from "lucide-react";
 import { Link } from "react-router-dom";
 import OurClients from "../../components/OurClients";
+import Card from "../../components/Card";
+
+const products = [
+  {
+    id: 1,
+    name: "Earthen Bottle",
+    href: "#",
+    price: "$48",
+    imageSrc: "/products/superseeder.jpg",
+    imageAlt:
+      "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
+  },
+  {
+    id: 2,
+    name: "Nomad Tumbler",
+    href: "#",
+    price: "$35",
+    imageSrc: "/products/plow.jpg",
+    imageAlt:
+      "Olive drab green insulated bottle with flared screw lid and flat top.",
+  },
+  // More products...
+];
 
 const Home = () => {
   return (
@@ -186,6 +209,45 @@ const Home = () => {
                 height={400}
                 className="object-contain"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white">
+        <div className="mx-auto max-w-2xl px-4 py-16 min-h-[80dvh] sm:px-6 sm:pb-24 sm:pt-16 lg:max-w-7xl lg:px-8">
+          <div className="mb-10 px-12">
+            <div>
+              <hr />
+            </div>
+            <div className="flex justify-center">
+              <h1 className="font-semibold px-4 -top-5 bg-white relative text-gray-600 text-2xl">
+                Our Products
+              </h1>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 gap-10 items-center">
+            <div className="col-span-2 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 xl:gap-x-8">
+              {products?.map((product) => (
+                <Card product={product} isRotate={false} />
+              ))}
+            </div>
+
+            <div className="flex flex-col shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] items-center justify-center h-[360px] p-4 bg-gray-100 rounded-lg">
+              <h2 className="text-xl font-bold text-gray-700 mb-4">
+                Explore more!
+              </h2>
+              <p className="text-gray-600 text-center mb-4">
+                Check out more products on our product page and find the perfect
+                one for you!
+              </p>
+              <Link
+                to="/product"
+                className="px-4 py-2 bg-gray-600 text-white rounded-lg shadow hover:bg-gray-700 transition"
+              >
+                Go to Products Page
+              </Link>
             </div>
           </div>
         </div>

@@ -253,6 +253,10 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="flex justify-center items-center">
+        <img src="/about/certificate.jpg" alt="..." />
+      </div>
+
       <div className="mt-20 px-12">
         <div>
           <hr />

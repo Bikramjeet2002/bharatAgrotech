@@ -7,6 +7,7 @@ import MuiAccordionSummary, {
 } from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import { BorderLeft } from '@mui/icons-material';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -18,6 +19,7 @@ const Accordion = styled((props) => (
   },
   '&::before': {
     display: 'none',
+    
   },
 }));
 
@@ -38,12 +40,17 @@ const AccordionSummary = styled((props) => (
   },
   ...theme.applyStyles('dark', {
     backgroundColor: 'rgba(255, 255, 255, .05)',
+ 
   }),
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   borderTop: '1px solid rgba(0, 0, 0, .125)',
+     borderLeft:'3px solid grey  ',
+     borderRadius:"2px",
+     
+     
 }));
 
 export default function CustomizedAccordions() {
@@ -59,7 +66,7 @@ export default function CustomizedAccordions() {
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
           <Typography  component="span">Collapsible Group Item #1</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails className='text-gray-500'>
           <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
@@ -72,21 +79,21 @@ export default function CustomizedAccordions() {
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
           <Typography component="span">Collapsible Group Item #2</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails className='text-gray-500'>
           <Typography>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
             sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
             sit amet blandit leo lobortis eget.
           </Typography>
-        </AccordionDetails>
+        </AccordionDetails >
       </Accordion>
       <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
           <Typography component="span">Collapsible Group Item #3</Typography>
         </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
+        <AccordionDetails className='text-gray-500'>
+          <Typography >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum dolor
             sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,

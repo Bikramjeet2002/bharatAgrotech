@@ -7,18 +7,20 @@ import About from "../pages/about/About";
 import ProductDetails from "../pages/product/ProductDetails";
 import Contact from "../pages/contact/Contact";
 import Testimonial from "../pages/Testimonial/Testimonial";
+import ScrollToTop from "../components/ScrollToTop";
 
 function RouteManager() {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="/product" element={<Product />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact/>} />
-          <Route path="/testimonial" element={<Testimonial/>} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/testimonial" element={<Testimonial />} />
         </Route>
       </Routes>
     </>

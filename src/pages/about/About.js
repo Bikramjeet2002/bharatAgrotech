@@ -8,7 +8,7 @@ const About = () => {
       <div className="py-12 relative ">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto bg">
           <div className="w-full justify-start items-center gap-20 grid lg:grid-cols-2 grid-cols-1">
-            <div className="w-full flex-col justify-start lg:items-start items-center gap-10 inline-flex">
+            <div className="w-full md:order-1 order-2 flex-col justify-start lg:items-start items-center gap-10 inline-flex">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
                 <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
                   Building Stronger Communities through Collaboration and
@@ -29,14 +29,14 @@ const About = () => {
               </button>
             </div>
             <img
-              className="lg:mx-0 mx-auto w-full shadow-lg h-[80%] border border-black-3 rounded-3xl object-cover"
+              className="lg:mx-0 mx-auto md:order-2 order-1 w-full shadow-lg h-[80%] border border-black-3 rounded-3xl object-cover"
               src="/about/t1.avif"
               alt="about Us image"
             />
           </div>
         </div>
       </div>
-      <div className="py-5 relative ">
+      <div className="py-5 relative mb-8">
         <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto bg">
           <div className="w-full justify-start items-center gap-20 grid lg:grid-cols-2 grid-cols-1">
             <img
@@ -81,21 +81,21 @@ const About = () => {
 
 
         <div className="md:flex md:w-[70%] justify-around mx-auto items-center mt-8 mb-16">
-          <div className="flex flex-col items-center justify-center">
-            <div className="bg-gray-100 h-[200px] w-[200px]  overflow-hidden border border-black-500 rounded-full">
+          <div className="flex flex-col items-center justify-center sm:mb-1 mb-10">
+            <div className="bg-gray-100 h-[200px] w-[200px] overflow-hidden border border-black-500 rounded-full">
               <img className="shadow-lg" src="/founder/Ravinder.jpg" alt="" />
             </div>
             <h1 className="mt-4 text-gray-600  text-2xl font-semibold">Ravinder Singh</h1>
             <p className="text-gray-600 font-semibold">Proprieter</p>
           </div>
-          <div className="flex flex-col  items-center justify-center">
+          <div className="flex flex-col  items-center justify-center mb-10 sm:mb-1">
             <div className="bg-gray-100 h-[200px] w-[200px] overflow-hidden  border border-black-500  rounded-full">
               <img src="/founder/ajay.jpg" alt="" />
             </div>
             <h1 className="mt-4 text-gray-600  text-2xl font-semibold">Ajay Goyal</h1>
             <p className="text-gray-600 font-semibold">Sales Head</p>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center sm:mb-1 mb-10">
             <div className="bg-gray-100 h-[200px] w-[200px] overflow-hidden  border border-black-500  rounded-full">
               <img src="/founder/Tarsem.jpg" alt="" />
             </div>

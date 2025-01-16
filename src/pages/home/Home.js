@@ -215,7 +215,7 @@ const Home = () => {
       </div>
 
       <div className="bg-white">
-        <div className="mx-auto max-w-2xl px-4 py-16 min-h-[80dvh] sm:px-6 sm:pb-24 sm:pt-16 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:pb-24 sm:pt-16 lg:max-w-7xl lg:px-8">
           <div className="mb-10 px-12">
             <div>
               <hr />
@@ -227,8 +227,8 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-10 items-center">
-            <div className="col-span-2 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 xl:gap-x-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
+            <div className="md:col-span-2 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 xl:gap-x-8">
               {products?.map((product) => (
                 <Card product={product} isRotate={false} />
               ))}

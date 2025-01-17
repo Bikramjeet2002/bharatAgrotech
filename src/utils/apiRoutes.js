@@ -1,4 +1,5 @@
 export const apiRoutes = {
-    ListProducts: '/products',
-    FetchProduct: '/product/:id'
-}
+  createContact: "/contact/create",
+  ListContacts: "/contact/getall",
+  FetchContact: "/getone/:id",
+};

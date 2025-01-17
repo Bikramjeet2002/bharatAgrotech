@@ -1,100 +1,16 @@
-import { Button } from "@headlessui/react";
 import React from "react";
-import Navbar from "../../components/Navbar";
-import { Image } from "lucide-react";
 import { Link } from "react-router-dom";
 import OurClients from "../../components/OurClients";
-import Card from "../../components/Card";
-
-const products = [
-  {
-    id: 1,
-    name: "Earthen Bottle",
-    href: "#",
-    price: "$48",
-    imageSrc: "/products/superseeder.jpg",
-    imageAlt:
-      "Tall slender porcelain bottle with natural clay textured body and cork stopper.",
-  },
-  {
-    id: 2,
-    name: "Nomad Tumbler",
-    href: "#",
-    price: "$35",
-    imageSrc: "/products/plow.jpg",
-    imageAlt:
-      "Olive drab green insulated bottle with flared screw lid and flat top.",
-  },
-  // More products...
-];
+import items from "../../product.json";
+import Whatsapp from "../../components/Whatsapp";
+import HomeCard from "../../components/HomeCard";
 
 const Home = () => {
+  const blades = items?.products;
+  const products = blades.slice(0, 2);
+
   return (
     <>
-      {/* the previous image that is being used on the git  */}
-      {/* <div className=" z-[-1] overflow-hidden object-cover sm:relative  -top-[110px] left-0 right-0 bottom-0   ">
-        
-        <img
-          className="m-auto  sm:h-[50dvh] lg:h-[100dvh] 2xl:!h-[750px] w-full"
-          src="/home/main.jpg"
-          alt=""
-        />
-      </div> */}
-
-      {/* this is also a good one but not responsive */}
-      {/* <div className="relative z-[-1] overflow-hidden sm:relative -top-[110px] left-0 right-0 bottom-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/15 to-black/45"></div>
-        <img
-          className="m-auto sm:h-[50dvh] lg:h-[100dvh] 2xl:!h-[750px] w-full object-cover"
-          src="/home/main.jpg"
-          alt="Background"
-        />
-      </div>
-      <div className=" absolute inset-0 flex justify-center text-center lg:justify-end  max-w-[95%] items-center">
-        <div className="w-[70%] lg:w-[70%] text-right text-white">
-          
-          <div className="lg:text-6xl md:text-4xl text-2xl font-bold space-y-2">
-            <h1 className="leading-tight">WELCOME TO</h1>
-            <h1 className="leading-tight text-primary">BHARAT AGRO TECH</h1>
-          </div>
-
-          
-          <div className="mt-6 flex lg:justify-end lg:items-end">
-            <p className="max-w-[50ch] text-right text-md md:text-lg  text-gray-100 leading-relaxed">
-              We are the manufacturer of Super Seeder Blades, Rotavator Blades,
-              and rotary tiller blades in Punjab, INDIA. Our European-quality
-              Rotary Tiller Blades are made with the world's high-performance
-              steel, ensuring ploughing through the toughest soil conditions.
-              Our blades have been approved by many O.E. manufacturers and end
-              users.
-            </p>
-          </div>
-        </div>
-      </div> */}
-
-      {/* text on the main image */}
-      {/* the previous text */}
-      {/* <div className="   flex justify-center">
-        <div className="mx-auto z-50 absolute flex justify-end top-[200px]  md:top-[125px] lg:top-[200px] w-[90%] ">
-          <div>
-            <div className="lg:text-6xl font-bold translate-y-2 transition-opacity delay-200 duration-700 md:text-xl ">
-              <h1 className=" flex  justify-end "> WELCOME TO </h1>
-              <h1 className=" flex  justify-end ">BHARAT AGRO TECH </h1>
-            </div>
-            <div className=" mt-3 flex justify-end me-0 w-full">
-              <p className="max-w-[50%] text-md mt-3 text-end">
-                We are the manufacturer of Super Seeder Blades, Rotavator
-                Blades, rotary tiller bladess in Punjab, INDIA. Our European
-                quality Rotary Tiller Blades are made with world's
-                high-performance steel, which ensures ploughing the toughest
-                soil conditions. Our blades has been approved by many O.E.
-                manufacturers and end users.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <div
         className="z-[-1] m-auto  h-[100dvh] 2xl:!h-[750px] w-full overflow-hidden object-cover sm:relative  -top-[110px] left-0 right-0 bottom-0   relative bg-cover bg-center"
         style={{
@@ -193,6 +109,9 @@ const Home = () => {
                 shovels are also ideal to be used in dry soil also.
               </p>
             </div>
+            {/* <div className="z-50"> 
+              <Whatsapp/>
+            </div> */}
 
             <Link
               to={"/about"}
@@ -230,7 +149,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-center">
             <div className="md:col-span-2 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 xl:gap-x-8">
               {products?.map((product) => (
-                <Card product={product} isRotate={false} />
+                <HomeCard product={product} isRotate={false} />
               ))}
             </div>
 
@@ -253,8 +172,52 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
-        <img src="/about/certificate.jpg" alt="..." />
+      <div className="grid md:grid-cols-2 mx-auto md:px-20 px-4 py-12 w-full md:gap-24 gap-10">
+        <div>
+          <h1 className="text-center text-2xl font-semibold text-gray-600 md:text-start">
+            Our Certifications
+          </h1>
+          <div className="sm:block hidden">
+            <p className="mt-5 text-gray-600">
+              We have a proficient team consisting of engineers and technocrats,
+              who employ their years of experience and expertise to manufacture
+              products that can provide the right impetus to the agricultural
+              industry. We use innovative techniques in our production
+              processes, which ensure that our range is available at competitive
+              prices.Having a strong basein the agricultural field, our company
+              is available to take care of the bulk order of any specifications
+              and execute it in the most conducive manner.
+            </p>
+            <p className="mt-3 text-gray-600">
+              We are the manufacturer of tractor cultivator shovels in Punjab,
+              India. We are one of the manufacturerfor all kinds of steel
+              shovels in our shovels crush the soil to make them smoother and
+              ready for all sorts of cultivation. The Cultivator shovels that
+              are made by us are uniquely produced to meet international quality
+              of standards. These professionally made shovels are also ideal to
+              be used in dry soil also.
+            </p>
+            <p className="mt-3 text-gray-600">
+              We are the manufacturer of Super Seeder Blades, Rotavator Blades,
+              rotary tiller blades in Punjab,India. Our European Quality Rotary
+              Tiller Blades are made with world's high performance steel, which
+              ensures ploughing the toughest soil conditions. Our Blades has
+              been approved by many O.E manufactures and end users. These blades
+              are manufactured under strict Heat-Treatment process to obtain
+              high quality blades. The rotary tiller blade is the main part of
+              rotary tiller machine and it is attached to a tractor for
+              ploughing. The Rotavator Blades plays a major role in making of
+              the soil .
+            </p>
+          </div>
+        </div>
+        <div>
+          <img
+            className="mx-0 w-full object-cover "
+            src="/about/certificate.jpg"
+            alt="..."
+          />
+        </div>
       </div>
 
       <div className="mt-20 px-12">

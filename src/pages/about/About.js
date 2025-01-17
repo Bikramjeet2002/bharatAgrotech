@@ -1,6 +1,7 @@
 import React from "react";
 import AccordionAb from "../../components/AccordianAb";
 import CustomModal from "../../components/CustomModal";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -22,11 +23,11 @@ const About = () => {
                   fabric of society.
                 </p>
               </div>
-              <button className="sm:w-fit w-full px-3.5 py-2 bg-gray-700 hover:bg-gray-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+              <Link to='/contact' className="sm:w-fit w-full px-3.5 py-2 bg-gray-700 hover:bg-gray-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
                 <span className="px-1.5 text-white text-sm font-medium leading-6">
                   Contact Us
                 </span>
-              </button>
+              </Link>
             </div>
             <img
               className="lg:mx-0 mx-auto md:order-2 order-1 w-full shadow-lg h-[80%] border border-black-3 rounded-3xl object-cover"
@@ -49,7 +50,7 @@ const About = () => {
                 <img className="w-7 h-7" src="/about/faq.png" alt="" />
                 <h1 className="font-bold text-gray-600 ml-2">FAQs</h1>
               </div>
-              <h2 className="text-gray-600 text-4xl  font-bold font-manrope leading-normal lg:text-start text-center">
+              <h2 className="text-gray-600 text-4xl  font-bold font-manrope leading-normal lg:text-start sm:text-center">
                 Frequently Asked QA...?
               </h2>
               <p className="mt-3 mb-10 text-gray-500">

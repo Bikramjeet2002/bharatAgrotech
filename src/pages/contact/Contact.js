@@ -1,5 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { apiClient } from "../../utils/apiClient";
+import { apiRoutes } from "../../utils/apiRoutes";
 
 const Contact = () => {
   const {
@@ -8,9 +10,16 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log("Form Data: ", data);
-    alert("Message sent successfully!");
+  const onSubmit = async (data) => {
+    try {
+      const response = await apiClient.post(`${apiRoutes.createContact}`, data);
+
+      if (response?.data?.success) {
+        alert(response?.data?.message);
+      }
+    } catch (error) {
+      alert("something went wrong");
+    }
   };
 
   return (
@@ -26,13 +35,29 @@ const Contact = () => {
           </p>
           <div className="space-y-4">
             <p className="text-gray-700 text-sm">
-              <strong className="block">Address</strong> 545 Mavis Island, Chicago, IL 99191
+              <strong className="block">Address</strong>{" "}
+              <p className="text-gray-700">Peer Gajju Shah Road </p>
+              <p className="text-gray-700">Mandi Gobindgarh Punjab ,</p>
+              <p className="text-gray-700">147301</p>
+            </p>
+
+            <p className="text-gray-700 text-sm">
+              <strong className="block">Email</strong>{" "}
+              <a
+                href="mailto: bhaaratagrotech@gmail.com"
+                className="text-gray-700 hover:underline"
+              >
+                bhaaratagrotech@gmail.com
+              </a>
             </p>
             <p className="text-gray-700 text-sm">
-              <strong className="block">Phone</strong> +1 (555) 234-5678
-            </p>
-            <p className="text-gray-700 text-sm">
-              <strong className="block">Email</strong> hello@example.com
+              <strong className="block">Phone</strong>{" "}
+              <a
+                href="tel:+919815451819"
+                className="text-sm  hover:underline mr-2 md:mr-4"
+              >
+                9814551819
+              </a>
             </p>
           </div>
         </div>
@@ -47,22 +72,22 @@ const Contact = () => {
               {/* First Name */}
               <div className="w-full">
                 <label
-                  htmlFor="firstName"
+                  htmlFor="first_name"
                   className="block text-sm font-medium text-gray-700"
                 >
                   First Name
                 </label>
                 <input
                   type="text"
-                  id="firstName"
-                  {...register("firstName", {
+                  id="first_name"
+                  {...register("first_name", {
                     required: "First Name is required",
                   })}
                   className="mt-1 block w-full py-2 outline-none bg-gray-100 px-3 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                 />
-                {errors.firstName && (
+                {errors.first_name && (
                   <span className="text-red-500 text-sm">
-                    {errors.firstName.message}
+                    {errors.first_name.message}
                   </span>
                 )}
               </div>
@@ -70,22 +95,22 @@ const Contact = () => {
               {/* Last Name */}
               <div className="w-full">
                 <label
-                  htmlFor="lastName"
+                  htmlFor="last_name"
                   className="block text-sm font-medium text-gray-700"
                 >
                   Last Name
                 </label>
                 <input
                   type="text"
-                  id="lastName"
-                  {...register("lastName", {
+                  id="last_name"
+                  {...register("last_name", {
                     required: "Last Name is required",
                   })}
                   className="mt-1 block w-full py-2 outline-none bg-gray-100 px-3 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
                 />
-                {errors.lastName && (
+                {errors.last_name && (
                   <span className="text-red-500 text-sm">
-                    {errors.lastName.message}
+                    {errors.last_name.message}
                   </span>
                 )}
               </div>
@@ -118,18 +143,18 @@ const Contact = () => {
               )}
             </div>
 
-            {/* Phone */}
+            {/* Phone
             <div>
               <label
-                htmlFor="phone"
+                htmlFor="phone_number"
                 className="block text-sm font-medium text-gray-700"
               >
                 Phone Number
               </label>
               <input
                 type="tel"
-                id="phone"
-                {...register("phone", {
+                id="phone_number"
+                {...register("phone_number", {
                   required: "Phone number is required",
                   pattern: {
                     value: /^[0-9]{10}$/,
@@ -138,11 +163,63 @@ const Contact = () => {
                 })}
                 className="mt-1 block w-full py-2 outline-none bg-gray-100 px-3 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
               />
-              {errors.phone && (
+              {errors.phone_number && (
                 <span className="text-red-500 text-sm">
-                  {errors.phone.message}
+                  {errors.phone_number.message}
                 </span>
               )}
+            </div> */}
+
+            <div className="flex gap-4">
+               {/* Phone */}
+            <div className="w-full">
+              <label
+                htmlFor="phone_number"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Phone Number
+              </label>
+              <input
+                type="tel"
+                id="phone_number"
+                {...register("phone_number", {
+                  required: "Phone number is required",
+                  pattern: {
+                    value: /^[0-9]{10}$/,
+                    message: "Phone number must be 10 digits",
+                  },
+                })}
+                className="mt-1  w-full py-2 outline-none bg-gray-100 px-3 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+              />
+              {errors.phone_number && (
+                <span className="text-red-500 text-sm">
+                  {errors.phone_number.message}
+                </span>
+              )}
+            </div>
+
+              {/* Last Name */}
+              <div className="w-full">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  {...register("subject", {
+                    required: "subject is required",
+                  })}
+                  className="mt-1 block w-full py-2 outline-none bg-gray-100 px-3 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                />
+                {errors.subject && (
+                  <span className="text-red-500 text-sm">
+                    {errors.subject.message}
+                  </span>
+                )}
+              </div>
             </div>
 
             {/* Message */}
@@ -181,7 +258,7 @@ const Contact = () => {
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3431.591763163374!2d76.2601021!3d30.673622200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391011f0840cf6eb%3A0xd500de31aee1131c!2sBharat%20Agro%20Tech!5e0!3m2!1sen!2sin!4v1736757553307!5m2!1sen!2sin"
           width="100%"
           height="300"
-          style={{ border: 0, margin: "0 auto", borderRadius: '8px' }}
+          style={{ border: 0, margin: "0 auto", borderRadius: "8px" }}
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

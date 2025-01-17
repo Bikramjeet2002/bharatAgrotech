@@ -1,0 +1,71 @@
+{
+  "products": [
+    {
+      "id": "product_001",
+      "name": "Rotavator Blade",
+      "shortDescription": "Durable and high-quality rotavator blade made from Boron Steel, ideal for efficient soil preparation.",
+      "images": [
+        {
+          "url": "/products/rotavater.jpg"
+        }
+      ],
+      "price": 1500,
+      "rating": 4.5,
+      "specifications": {
+        "Design": "R-119",
+        "Type": "Rotavator Blades L-Type, C-Type",
+        "Available_Hole_Sizes": ["14 x 46 mm", ", ", "14 x 57 mm"],
+        "Flat_Size": "30 x 7 mm",
+        "Available_Colors": ["Powder Coated Black", ", ", "Blue"],
+        "Packaging_Per_Box": "20 Pieces (10 Left, 10 Right)",
+        "Material_Used": "Boron Steel",
+        "Overall_Length": "270 mm"
+      }
+    },
+    {
+      "id": "product_002",
+      "name": "Super Seeder Blade",
+      "shortDescription": "Heavy-duty super seeder blades designed for optimal planting and soil performance.",
+      "images": [
+        {
+          "url": "/products/plow.jpg"
+        }
+      ],
+      "price": 1800,
+      "rating": 4.7,
+      "specifications": {
+        "Design": ["SS-658", ", ", "SS-707"],
+        "Type": "Super Seeder Blades LJF Type",
+        "Available_Hole_Sizes": ["14 x 46 mm", ", ", "14 x 57 mm"],
+        "Flat_Size": ["70 x 7 mm", ", ", "65 x 8 mm"],
+        "Available_Colors": ["Powder Coated Black", ", ", "Blue"],
+        "Packaging_Per_Box": "20 Pieces (10 Left, 10 Right)",
+        "Material_Used": "Boron Steel",
+        "Overall_Length": "310 mm",
+        "Hardness": "40-45 HRC"
+      }
+    },
+    {
+      "id": "product_003",
+      "name": "Cultivator Shovel / Phalla",
+      "shortDescription": "Sturdy cultivator shovel suitable for heavy-duty soil cultivation tasks.",
+      "images": [
+        {
+          "url": "/products/rootawaiter.jpg"
+        }
+      ],
+      "price": 2000,
+      "rating": 4.6,
+      "specifications": {
+        "Design": "R-319",
+        "Type": "Cultivator Shovel / Phalla",
+        "Available_Set_Weights": ["12 Kg", ", ", "18 Kg"],
+        "Flat_Size": ["70 x 7 mm", ", ", "65 x 8 mm"],
+        "Available_Colors": ["Powder Coated Black", ", ", "Blue"],
+        "Packaging_Per_Box": "11 Pieces",
+        "Material_Used": "Rail High Carbon",
+        "Overall_Length": ["12 Kg Set - 14\"", ", ", "18 Kg Set - 15\""]
+      }
+    }
+  ]
+}

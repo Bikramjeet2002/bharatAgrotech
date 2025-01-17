@@ -1,6 +1,7 @@
 import React from "react";
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import { WhatsApp } from "@mui/icons-material";
 
 const Footer = () => {
   return (
@@ -85,7 +86,8 @@ const Footer = () => {
                 href="#"
                 className="text-gray-400 hover:text-white transition duration-300"
               >
-                <Twitter className="w-6 h-6" />
+               
+                <WhatsApp className="w-6 h-6" />
                 <span className="sr-only">Twitter</span>
               </a>
               <a

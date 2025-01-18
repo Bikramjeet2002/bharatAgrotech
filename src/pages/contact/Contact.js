@@ -7,6 +7,7 @@ const Contact = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -15,7 +16,9 @@ const Contact = () => {
       const response = await apiClient.post(`${apiRoutes.createContact}`, data);
 
       if (response?.data?.success) {
+        reset()
         alert(response?.data?.message);
+
       }
     } catch (error) {
       alert("something went wrong");

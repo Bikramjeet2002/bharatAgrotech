@@ -1,0 +1,43 @@
+ {
+    "reviews" : [
+  {
+    "id": 1,
+    "product": "Rotavator Blades",
+    "reviewer": "Ramesh Kumar",
+    "rating": 5,
+    "image": "/clients/avatar.avif",
+    "description": "Excellent quality! The blades are durable and efficient for heavy farming tasks."
+  },
+  {
+    "id": 2,
+    "product": "Super Seeder Blades",
+    "reviewer": "Priya Verma",
+    "rating": 4,
+    "image": "/clients/avatar.avif",
+    "description": "Good performance. Helps in quick seeding with less effort. Worth the investment."
+  },
+  {
+    "id": 3,
+    "product": "Plow Blades",
+    "reviewer": "Rajesh Mehta",
+    "rating": 3,
+    "image": "/clients/avatar.avif",
+    "description": "The plow blades work well, but could be slightly sharper for tougher soil."
+  },
+  {
+    "id": 4,
+    "product": "Rotavator Blades",
+    "reviewer": "Suman Yadav",
+    "rating": 4,
+    "image": "/clients/avatar.avif",
+    "description": "Very reliable. Made plowing my farm much easier. Some rusting issues after heavy use."
+  },
+  {
+    "id": 5,
+    "product": "Super Seeder Blades",
+    "reviewer": "Amit Reddy",
+    "rating": 5,
+    "image": "/clients/avatar.avif",
+    "description": "Amazing product! Increased productivity in seeding operations. Highly recommend."
+  }
+]}

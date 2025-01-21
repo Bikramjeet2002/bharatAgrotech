@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import { WhatsApp } from "@mui/icons-material";
 
@@ -70,7 +70,7 @@ const Footer = () => {
               Email: bhaaratagrotech@gmail.com
             </a>
 
-            <p className="text-gray-400">Phone: 9414551819</p>
+            <p className="text-gray-400">Phone: 9814551819</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>

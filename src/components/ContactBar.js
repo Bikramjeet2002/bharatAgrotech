@@ -1,13 +1,13 @@
 import React from 'react'
-import { Mail, Facebook, Twitter, Instagram, Linkedin, Phone } from 'lucide-react'
-import { Link, useLocation, useParams } from 'react-router-dom'
-import { FacebookOutlined, FacebookSharp, FacebookTwoTone, WhatsApp } from '@mui/icons-material'
-import { InstagramLogoIcon } from '@radix-ui/react-icons'
+import { Mail,  Instagram,  Phone } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
+import { FacebookOutlined, WhatsApp } from '@mui/icons-material'
+
 
 
 const ContactBar = () => {
     const {pathname} = useLocation()
-    console.log(pathname == '/')
+    console.log(pathname === '/')
   return (
     <header className="bg-gray-600 text-white py-2 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto flex justify-between items-center">

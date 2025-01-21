@@ -1,6 +1,6 @@
 import React from "react";
 import items from "../../product.json";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ProductDetailsPage = () => {
   const { id } = useParams();
@@ -106,7 +106,41 @@ const ProductDetailsPage = () => {
               </tr>
             </tbody>
           </table>
+
+        <div className=" grid grid-cols-2 md:grid-cols-3 gap-2 mt-5 "> 
+          <div className=" w-full">
+          <Link to='https://wa.me/9814551819'
+              type="submit"
+              className="   py-2 px-4 bg-gray-600 text-white font-medium rounded-md shadow-sm hover:bg-gray-700 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            >
+              
+          Whatsapp
+            </Link>
+            
+          </div>
+      
+          <div className=" ">
+          <Link to='tel:+919815451819'
+              type="submit"
+              className=" w-full  py-2 px-4 bg-gray-600 text-white font-medium rounded-md shadow-sm hover:bg-gray-700 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            >
+             
+                Call now
+            </Link>
+            
+          </div>
+        
         </div>
+
+        <div>
+    
+
+        </div>
+
+
+        </div>
+
+       
       </div>
     </div>
   );

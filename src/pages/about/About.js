@@ -1,6 +1,5 @@
 import React from "react";
 import AccordionAb from "../../components/AccordianAb";
-import CustomModal from "../../components/CustomModal";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -11,17 +10,19 @@ const About = () => {
           <div className="w-full justify-start items-center gap-20 grid lg:grid-cols-2 grid-cols-1">
             <div className="w-full md:order-1 order-2 flex-col justify-start lg:items-start items-center gap-10 inline-flex">
               <div className="w-full flex-col justify-start lg:items-start items-center gap-4 flex">
-                <h2 className="text-gray-900 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
-                  Building Stronger Communities through Collaboration and
-                  Empowerment
+                <div>
+                  <h2 className="text-gray-700 text-4xl font-bold font-manrope leading-normal lg:text-start text-center">
+                Our Vision
+               
                 </h2>
                 <p className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
-                  Through collaborationperse perspectives and strengths are
-                  leveraged to create inclusive environments where everyone has
-                  the opportunity to thrive. This approach not only fosters
-                  personal growth and achievement but also strengthens the
-                  fabric of society.
+                To revolutionize the agricultural industry by offering reliable, durable, and cutting-edge tools that meet the needs of modern farmers. We aim to bring superior quality and productivity to every farm we serve.
                 </p>
+                <p className="text-gray-500 mt-5 text-base font-normal leading-relaxed lg:text-start text-center">
+                Our experienced engineers and technocrats employ cutting-edge techniques and years of expertise to create products that enhance farming efficiency. The team's dedication ensures timely delivery of high-quality products at competitive prices.
+
+                </p>
+                </div>
               </div>
               <Link to='/contact' className="sm:w-fit w-full px-3.5 py-2 bg-gray-700 hover:bg-gray-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
                 <span className="px-1.5 text-white text-sm font-medium leading-6">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRightCircle, StarIcon } from "lucide-react";
+import { ArrowRightCircle } from "lucide-react";
 
 const HomeCard = ({ product, isRotate = true }) => {
   return (

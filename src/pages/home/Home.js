@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import OurClients from "../../components/OurClients";
 import items from "../../product.json";
-import Whatsapp from "../../components/Whatsapp";
+
 import HomeCard from "../../components/HomeCard";
 
 const Home = () => {

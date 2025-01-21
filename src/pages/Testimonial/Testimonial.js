@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import CustomModal from "../../components/CustomModal";
 import { Cancel } from "@mui/icons-material";
+import view from "../../review.json"
 
 export default function ProfileCards() {
   const [open, setOpen] = useState(false);
+  const review =view?.reviews
 
   const cards = [
     {
@@ -30,6 +32,7 @@ export default function ProfileCards() {
   ];
 
   return (
+    
     <div className="sm:px-24 px-2">
       <CustomModal open={open}>
         <div className="bg-white w-full  md:w-[700px] rounded-lg p-5">
@@ -63,6 +66,7 @@ export default function ProfileCards() {
           <hr />
         </div>
         <div className="flex justify-center">
+          {console.log(review)}
           <h1 className="font-semibold px-4 -top-5 bg-white relative text-gray-600 text-2xl">
             Testimonials
           </h1>
@@ -73,10 +77,10 @@ export default function ProfileCards() {
         </p>
       </div>
       <div className="grid grid-cols-1 mb-20 mt-10 sm:grid-cols-2 lg:grid-cols-3 gap-16 p-2 sm:p-6">
-        {cards.map((card) => (
+        {review.map((card) => (
           <div
             key={card.id}
-            className="h-[370px] mx-auto shadow-xl rounded-2xl p-6 hover:shadow-2xl"
+            className="h-[370px] mx-auto shadow-xl  rounded-2xl p-6 "
           >
             <div className="flex flex-col items-center">
               <div className="w-28 h-28 mb-4">
@@ -87,7 +91,7 @@ export default function ProfileCards() {
                 />
               </div>
               <h2 className="text-md font-semibold text-gray-800">
-                {card.name}
+                {card.reviewer}
               </h2>
               <p className="text-gray-600 line-clamp-3 text-sm text-center mt-3 leading-relaxed">
                 {card.description}

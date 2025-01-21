@@ -16,9 +16,8 @@ const Contact = () => {
       const response = await apiClient.post(`${apiRoutes.createContact}`, data);
 
       if (response?.data?.success) {
-        reset()
+        reset();
         alert(response?.data?.message);
-
       }
     } catch (error) {
       alert("something went wrong");
@@ -32,18 +31,25 @@ const Contact = () => {
         <div className="w-full md:w-1/2 md:mb-0 mb-10">
           <h2 className="text-2xl font-bold mb-4">Get in touch</h2>
           <p className="mb-6 text-gray-600 max-w-lg">
-            Proin volutpat consequat porttitor cras nullam gravida at. Orci
-            molestie a eu arcu. Sed ut tincidunt integer elementum id sem. Arcu
-            sed malesuada et magna.
+            We’re here to help! Whether you have a question about our products,
+            need support, or want to collaborate, feel free to get in touch with
+            us.
           </p>
           <div className="space-y-4">
             <p className="text-gray-700 text-sm">
               <strong className="block">Address</strong>{" "}
-              <p className="text-gray-700">Peer Gajju Shah Road </p>
-              <p className="text-gray-700">Mandi Gobindgarh Punjab ,</p>
-              <p className="text-gray-700">147301</p>
+              <p className="text-gray-700">
+                {" "}
+                Bharat Agro Tech, Backside R P Concast,{" "}
+              </p>
+              <p className="text-gray-700">
+                {" "}
+                Peer Gajju Shah Road, Mughal Majra,
+              </p>
+              <p className="text-gray-700"> Mandi Gobindgarh,</p>
+              <p className="text-gray-700"> Punjab 147301</p>
             </p>
-
+           
             <p className="text-gray-700 text-sm">
               <strong className="block">Email</strong>{" "}
               <a
@@ -174,32 +180,32 @@ const Contact = () => {
             </div> */}
 
             <div className="flex gap-4">
-               {/* Phone */}
-            <div className="w-full">
-              <label
-                htmlFor="phone_number"
-                className="block text-sm font-medium text-gray-700"
-              >
-                Phone Number
-              </label>
-              <input
-                type="tel"
-                id="phone_number"
-                {...register("phone_number", {
-                  required: "Phone number is required",
-                  pattern: {
-                    value: /^[0-9]{10}$/,
-                    message: "Phone number must be 10 digits",
-                  },
-                })}
-                className="mt-1  w-full py-2 outline-none bg-gray-100 px-3 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
-              />
-              {errors.phone_number && (
-                <span className="text-red-500 text-sm">
-                  {errors.phone_number.message}
-                </span>
-              )}
-            </div>
+              {/* Phone */}
+              <div className="w-full">
+                <label
+                  htmlFor="phone_number"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone_number"
+                  {...register("phone_number", {
+                    required: "Phone number is required",
+                    pattern: {
+                      value: /^[0-9]{10}$/,
+                      message: "Phone number must be 10 digits",
+                    },
+                  })}
+                  className="mt-1  w-full py-2 outline-none bg-gray-100 px-3 border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500"
+                />
+                {errors.phone_number && (
+                  <span className="text-red-500 text-sm">
+                    {errors.phone_number.message}
+                  </span>
+                )}
+              </div>
 
               {/* Last Name */}
               <div className="w-full">

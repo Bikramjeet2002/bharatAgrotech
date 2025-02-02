@@ -29,13 +29,13 @@ export default function Navbar() {
             <div className="flex h-16  items-center  justify-between">
               <div className="shrink-0 flex sm:text-center ">
                 
-                <div className="align-middle ">
+                <Link to="/" className="align-middle ">
                   <img
                     alt="Your Company"
                     src="/logo/Batlogo.png"
                     className="size-20 px-1"
                   />
-                </div>
+                </Link>
               </div>
               <div className="flex items-center">
                 <div className="hidden  sm:block">
@@ -61,8 +61,8 @@ export default function Navbar() {
                 </div>
               </div>
               <div className="hidden md:block">
-                <div className="ml-4 flex items-center md:ml-6">
-                
+                <div className="ml-4  flex items-center ">
+            {/* <button className="bg-gray-700 hover:bg-gray-800 p-1  rounded-full text-white text-sm px-2">Download Broscher</button> */}
                 </div>
               </div>
               <div className="-mr-2 flex sm:hidden">

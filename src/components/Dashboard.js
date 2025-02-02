@@ -23,13 +23,13 @@ export default function Dashboard() {
           <div className="mx-auto py-6  max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="flex h-16  items-center  justify-between">
               <div className="shrink-0 flex sm:text-center ">
-                <div className="align-middle">
+                <Link to="/" className="align-middle">
                   <img
                     alt="Your Company"
                     src="/logo/Batlogo.png"
                     className="size-20 px-1"
                   />
-                </div>
+                </Link>
               </div>
               <div className="flex items-center">
                 <div className="hidden  md:block">

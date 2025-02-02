@@ -6,7 +6,7 @@ const HomeCard = ({ product, isRotate = true }) => {
   return (
     <div
       title={`${isRotate ? "Click To View Info" : ""}`}
-      className={`shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] h-[380px] bg-white ${
+      className={`shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] h-[380px] bg-gray-100 ${
         isRotate ? "hover:rotate-1 transition-all duration-500" : ""
       } rounded-3xl p-3`}
     >
@@ -15,7 +15,7 @@ const HomeCard = ({ product, isRotate = true }) => {
           <img
             alt={product?.imageAlt}
             src={product?.images[0].url}
-            className="aspect-square !relative w-full h-fit rounded-2xl object-cover"
+            className="aspect-square border  border-gray-300  !relative w-full h-fit rounded-2xl object-cover"
           />
           <div className="absolute p-8 rounded-2xl z-50 top-0 bottom-0 left-0 right-0 hover:bg-black/40">
             <div className="group-hover:flex flex-col h-full hidden items-end justify-between text-white">

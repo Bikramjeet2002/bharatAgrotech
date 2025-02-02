@@ -6,7 +6,7 @@ const Card = ({ product, isRotate = true }) => {
   return (
     <div
       title="Click To View Info"
-      className={`shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] h-[360px] ${
+      className={`shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] h-[360px] bg-gray-100 ${
         isRotate ? "hover:rotate-1 transition-all duration-500" : ""
       } rounded-lg p-3`}
     >
@@ -14,7 +14,7 @@ const Card = ({ product, isRotate = true }) => {
         <img
           alt={product?.imageAlt}
           src={product?.images[0].url}
-          className="aspect-square w-full h-[70%] rounded-2xl bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+          className="aspect-square w-full h-[70%] rounded-2xl shadow-sm border border-gray-300 bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
         />
         <div>
           <h3 className="mt-4 text-md font-semibold text-gray-700">
@@ -24,8 +24,9 @@ const Card = ({ product, isRotate = true }) => {
             {product?.shortDescription}
           </p>
           <p className="mt-1 text-md font-medium inline-flex items-center text-gray-700">
-            Rs{product?.price} (<StarIcon className="w-4 h-4" />
-            {product?.rating})
+            {/* Rs{product?.price}  */}
+            <StarIcon className="w-4 h-4" />
+            {product?.rating}
           </p>
         </div>
       </Link>

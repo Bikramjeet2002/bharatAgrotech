@@ -45,7 +45,7 @@ const Footer = () => {
                   to="/product"
                   className="hover:text-gray-300 transition duration-300"
                 >
-                  Services
+                Products
                 </Link>
               </li>
               <li>
@@ -54,6 +54,14 @@ const Footer = () => {
                   className="hover:text-gray-300 transition duration-300"
                 >
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/testimonial"
+                  className="hover:text-gray-300 transition duration-300"
+                >
+                  Testimonials
                 </Link>
               </li>
             </ul>
@@ -70,26 +78,26 @@ const Footer = () => {
               Email: bhaaratagrotech@gmail.com
             </a>
 
-            <p className="text-gray-400">Phone: 9814551819</p>
+            <Link to="tel:9814551819" className="text-gray-400">
+              Phone: 9814551819
+            </Link>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a
-                href="#"
+              <Link  to="https://www.facebook.com/bhaaratagrotech"
                 className="text-gray-400 hover:text-white transition duration-300"
               >
                 <Facebook className="w-6 h-6" />
                 <span className="sr-only">Facebook</span>
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                to="https://wa.me/9814551819"
                 className="text-gray-400 hover:text-white transition duration-300"
               >
-               
                 <WhatsApp className="w-6 h-6" />
-                <span className="sr-only">Twitter</span>
-              </a>
+                
+              </Link>
               <a
                 href="#"
                 className="text-gray-400 hover:text-white transition duration-300"

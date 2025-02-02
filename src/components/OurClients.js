@@ -25,7 +25,6 @@ export default () => {
     {
       image: "/clients/avtar-logo.png",
     },
-    
   ]);
 
   return (

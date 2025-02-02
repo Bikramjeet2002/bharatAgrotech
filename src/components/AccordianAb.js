@@ -62,15 +62,14 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel1")}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography component="span">
+          <Typography className="text-gray-700" component="span">
             {" "}
             What makes Bharat Agro Tech blades unique?
-         
           </Typography>
         </AccordionSummary>
         <AccordionDetails className="text-gray-500">
           <Typography>
-          The blades are manufactured using advanced technology and strict
+            The blades are manufactured using advanced technology and strict
             quality control. They are designed for tough soil conditions,
             ensuring effective plowing and cultivation.
           </Typography>
@@ -81,7 +80,10 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel2")}
       >
         <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-          <Typography component="span"> Why choose Bharat Agro Tech</Typography>
+          <Typography className="text-gray-700" component="span">
+            {" "}
+            Why choose Bharat Agro Tech
+          </Typography>
         </AccordionSummary>
         <AccordionDetails className="text-gray-500">
           <Typography>
@@ -95,13 +97,12 @@ export default function CustomizedAccordions() {
         onChange={handleChange("panel3")}
       >
         <AccordionSummary aria-controls="panel3d-content" id="panel3d-header">
-          <Typography component="span">
-          What is the specialty of Bharat Agro Tech products?
+          <Typography className="text-gray-700" component="span">
+            What is the specialty of Bharat Agro Tech products?
           </Typography>
         </AccordionSummary>
         <AccordionDetails className="text-gray-500">
           <Typography>
-    
             Bharat Agro Tech products are known for:
             <li>
               European-quality rotary tiller blades made of high-performance

@@ -2,13 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import OurClients from "../../components/OurClients";
 import items from "../../product.json";
+import views from "../../review.json";
 
 import HomeCard from "../../components/HomeCard";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  const review = views?.reviews;
   const blades = items?.products;
   const products = blades.slice(0, 2);
-
+  const test = review.slice(0, 2);
   return (
     <>
       <div
@@ -90,7 +93,7 @@ const Home = () => {
             </h1>
 
             <div className="space-y-3 my-0 text-gray-600">
-              <p>
+              <p data-aos="fade-up" data-aos-anchor-placement="top-center">
                 BHARAT AGRO TECH was established in 2020 by S. Ravinder Singh
                 Padam with the support of Sh. Ajay Goyal, Sh. Gagandeep Jain and
                 Sh. Tarsem Garg with a motive to bring ease to farmers in terms
@@ -230,7 +233,7 @@ const Home = () => {
           </h1>
         </div>
       </div>
-      <div className="max-w-7xl  mx-auto px-4 pt-8 pb-12 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-26">
+      <div className="max-w-7xl  mx-auto px-4 pt-8 pb-12 grid grid-cols-1 md:grid-cols-5 gap-8  md:gap-26">
         <div className="md:col-span-1">
           <div className=" flex align-middle">
             <img className="w-6 h-6" src="/testimonial/feedback.png" alt="" />
@@ -245,33 +248,42 @@ const Home = () => {
         </div>
 
         {/* First Card */}
-        <div className="flex w-full bg-white md:col-span-2 rounded-lg shadow-lg border border-gray-300 overflow-hidden">
-          {/* Image Section */}
-          <img
-            className="w-1/3 object-cover"
-            src="/testimonial/t1.jpg"
-            alt="User Image"
-          />
-          {/* Feedback Section */}
-          <div className="p-4 flex flex-col justify-center w-2/3">
-            <h3 className="text-lg font-bold text-gray-800">John Doe</h3>
-            <p className="text-sm text-gray-600 mb-2">CEO at TechCorp</p>
-            <p className="text-gray-700 text-sm">
-              "Bharat Agro Tech products are top-notch. Their quality has
-              significantly improved our productivity. Highly recommend!"
-            </p>
-          </div>
-        </div>
+        <Link
+          to={"/testimonial"}
+          className="col-span-4 grid md:grid-cols-2 gap-4"
+        >
+          {test.map((t) => (
+            <div
+              key={t.id} // Ensure a unique key for each item
+              className="flex bg-white min-h-[200px] rounded-lg shadow-lg border border-gray-300 overflow-hidden"
+            >
+              {/* Image Section */}
+              <img
+                className="w-1/2 object-cover"
+                src={t.profile}
+                alt="User Image"
+              />
+              {/* Feedback Section */}
+              <div className="p-4 flex flex-col justify-center w-2/3">
+                <h3 className="text-lg font-bold text-gray-800">
+                  {t.reviewer}
+                </h3>
+                <p className="text-sm text-gray-600 mb-2">{t.product}</p>
+                <p className="text-gray-700 text-sm">{t.description}</p>
+              </div>
+            </div>
+          ))}
+        </Link>
 
         {/* Second Card */}
-        <div className="flex w-full md:col-span-2 min-h-[210px] bg-white border border-gray-300  rounded-lg shadow-lg overflow-hidden">
-          {/* Image Section */}
+        {/* <div className="flex w-full md:col-span-2 min-h-[210px] bg-white border border-gray-300  rounded-lg shadow-lg overflow-hidden">
+        
           <img
             className="w-1/3  object-cover"
             src="/testimonial/t2.jpg"
             alt="User Image"
           />
-          {/* Feedback Section */}
+        
           <div className="p-4 flex flex-col justify-center w-2/3">
             <h3 className="text-lg font-bold text-gray-800">Jane Smith</h3>
             <p className="text-sm text-gray-600 mb-2">Farmer</p>
@@ -281,7 +293,7 @@ const Home = () => {
               support!"
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

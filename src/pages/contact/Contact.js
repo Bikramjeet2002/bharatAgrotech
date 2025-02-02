@@ -49,7 +49,7 @@ const Contact = () => {
               <p className="text-gray-700"> Mandi Gobindgarh,</p>
               <p className="text-gray-700"> Punjab 147301</p>
             </p>
-           
+
             <p className="text-gray-700 text-sm">
               <strong className="block">Email</strong>{" "}
               <a
@@ -63,11 +63,18 @@ const Contact = () => {
               <strong className="block">Phone</strong>{" "}
               <a
                 href="tel:+919815451819"
+                className="text-sm  hover:underline mr-2 md:mr-1"
+              >
+                9814551819,
+              </a>
+              <a
+                href="tel:+919888503966"
                 className="text-sm  hover:underline mr-2 md:mr-4"
               >
-                9814551819
+                9888503966
               </a>
             </p>
+           
           </div>
         </div>
 

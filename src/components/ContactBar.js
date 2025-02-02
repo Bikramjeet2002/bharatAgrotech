@@ -29,8 +29,8 @@ const ContactBar = () => {
           </div>
           <div className='flex'>
           <Phone className="h-5 w-5 mr-2" />
-          <a href="tel:+919815451819" className="text-sm  hover:underline">
-            9814551819
+          <a href="tel:+919888503966" className="text-sm  hover:underline">
+            9888503966
           </a>
           </div>
         </div>

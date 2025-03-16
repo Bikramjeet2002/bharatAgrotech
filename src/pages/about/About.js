@@ -32,7 +32,7 @@ const About = () => {
             </div>
             <img
               className="lg:mx-0 mx-auto md:order-2 order-1 w-full shadow-lg h-[80%] border border-black-3 rounded-3xl object-cover"
-              src="/about/t1.avif"
+              src="/about/about1.jpg"
               alt="aboutUsimage"
             />
           </div>

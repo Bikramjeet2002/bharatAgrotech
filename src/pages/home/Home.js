@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import OurClients from "../../components/OurClients";
 import items from "../../product.json";
@@ -7,14 +7,55 @@ import views from "../../review.json";
 import HomeCard from "../../components/HomeCard";
 import "aos/dist/aos.css";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
 const Home = () => {
   const review = views?.reviews;
   const blades = items?.products;
   const products = blades.slice(0, 2);
   const test = review.slice(0, 2);
+  const [images] = useState([
+    "/home/main1.jpg",
+    "/home/cover-image.jpg",
+    "/home/cover-image1.jpg",
+  ]);
   return (
     <>
-      <div
+      <div className="z-[-1] m-auto  h-[100dvh] 2xl:!h-[750px] w-full overflow-hidden object-cover sm:relative  -top-[110px] left-0 right-0 bottom-0   relative bg-cover bg-center">
+        {/* Swiper for background images */}
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop={true}
+          className="absolute inset-0 w-full h-full"
+        >
+          {images.map((img, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="w-full h-full bg-cover bg-center"
+                style={{
+                  backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(${img})`,
+                }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        {/* Static Text Overlay */}
+        <div className=" z-40 absolute inset-0 flex flex-col justify-center items-center text-white text-center px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+             BHARAT AGRO TECH
+          </h1>
+          <p className="text-sm md:text-lg max-w-2xl">
+            We are the manufacturer of Super Seeder Blades, Rotavator Blades,
+            rotary tiller blades in Punjab, INDIA. Our European quality Rotary
+            Tiller Blades are made with the world's high-performance steel,
+            which ensures ploughing the toughest soil conditions.
+          </p>
+        </div>
+      </div>
+      {/* <div
         className="z-[-1] m-auto  h-[100dvh] 2xl:!h-[750px] w-full overflow-hidden object-cover sm:relative  -top-[110px] left-0 right-0 bottom-0   relative bg-cover bg-center"
         style={{
           backgroundImage: ` linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('/home/main1.jpg')`,
@@ -25,7 +66,6 @@ const Home = () => {
             <h1 className=" md:flex  md:justify-center  w-full text-4xl md:text-5xl font-bold mb-4">
               WELCOME TO BHARAT AGRO TECH
             </h1>
-            <h1 className=" flex   w-full text-4xl md:text-5xl font-bold mb-4"></h1>
           </div>
           <div>
             <p className="text-sm md:text-lg max-w-2xl">
@@ -36,7 +76,7 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* swiper */}
       <div className="mb-10 px-12">
@@ -93,7 +133,8 @@ const Home = () => {
             </h1>
 
             <div className="space-y-3 my-0 text-gray-600">
-              <p data-aos="fade-up" data-aos-anchor-placement="top-center">
+              {/* <p data-aos="fade-up" data-aos-anchor-placement="top-center"> */}
+              <p>
                 BHARAT AGRO TECH was established in 2020 by S. Ravinder Singh
                 Padam with the support of Sh. Ajay Goyal, Sh. Gagandeep Jain and
                 Sh. Tarsem Garg with a motive to bring ease to farmers in terms
@@ -175,7 +216,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 mx-auto md:px-20 px-4 py-12 w-full md:gap-24 gap-10">
+      <div className="grid md:grid-cols-2 mx-auto md:px-32 px-4 py-12 w-full md:gap-24 gap-10">
         <div>
           <h1 className="text-center text-2xl font-semibold text-gray-600 md:text-start">
             Our Certifications
@@ -252,24 +293,28 @@ const Home = () => {
           to={"/testimonial"}
           className="col-span-4 grid md:grid-cols-2 gap-4"
         >
-          {test.map((t) => (
+          {test.map((testmonial) => (
             <div
-              key={t.id} // Ensure a unique key for each item
+              key={testmonial.id} // Ensure a unique key for each item
               className="flex bg-white min-h-[200px] rounded-lg shadow-lg border border-gray-300 overflow-hidden"
             >
               {/* Image Section */}
               <img
-                className="w-1/2 object-cover"
-                src={t.profile}
-                alt="User Image"
+                className="w-[30%] object-cover"
+                src={testmonial.profile}
+                alt="UserImage"
               />
               {/* Feedback Section */}
               <div className="p-4 flex flex-col justify-center w-2/3">
                 <h3 className="text-lg font-bold text-gray-800">
-                  {t.reviewer}
+                  {testmonial.reviewer}
                 </h3>
-                <p className="text-sm text-gray-600 mb-2">{t.product}</p>
-                <p className="text-gray-700 text-sm">{t.description}</p>
+                <p className="text-sm text-gray-600 mb-2">
+                  {testmonial.product}
+                </p>
+                <p className="text-gray-700 text-sm">
+                  {testmonial.description}
+                </p>
               </div>
             </div>
           ))}

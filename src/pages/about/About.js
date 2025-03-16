@@ -24,7 +24,7 @@ const About = () => {
                 </p>
                 </div>
               </div>
-              <Link to='/contact' className="sm:w-fit w-full px-3.5 py-2 bg-gray-700 hover:bg-gray-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
+              <Link to='/contact' className="sm:w-fit w-full px-3.5 py-2 bg-gray-600 hover:bg-gray-800  rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex">
                 <span className="px-1.5 text-white text-sm font-medium leading-6">
                   Contact Us
                 </span>
@@ -33,7 +33,7 @@ const About = () => {
             <img
               className="lg:mx-0 mx-auto md:order-2 order-1 w-full shadow-lg h-[80%] border border-black-3 rounded-3xl object-cover"
               src="/about/t1.avif"
-              alt="about Us image"
+              alt="aboutUsimage"
             />
           </div>
         </div>
@@ -44,7 +44,7 @@ const About = () => {
             <img
               className="lg:mx-0 w-full shadow-lg mx-auto h-[80%] rounded-3xl object-cover"
               src="/about/blades.jpg"
-              alt="about Us image"
+              alt="aboutUsimage"
             />
             <div>
               <div className="flex align-middle  text-gray-700   ">
@@ -85,7 +85,7 @@ const About = () => {
         <div className="md:flex md:w-[70%] justify-around mx-auto items-center mt-8 mb-16">
           <div className="flex flex-col items-center justify-center sm:mb-1 mb-10">
             <div className="bg-gray-100 h-[200px] w-[200px] overflow-hidden border border-black-500 rounded-full">
-              <img className="shadow-lg" src="/founder/Ravinder.jpg" alt="" />
+              <img className="shadow-lg" src="/founder/Ravinder1.jpg" alt="" />
             </div>
             <h1 className="mt-4 text-gray-600  text-2xl font-semibold">Ravinder Singh</h1>
             <p className="text-gray-600 font-semibold">Proprieter</p>

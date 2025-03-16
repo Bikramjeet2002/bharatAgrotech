@@ -1,5 +1,5 @@
 import React from 'react'
-import { Mail,  Instagram,  Phone } from 'lucide-react'
+import { Mail,    Phone } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 import { FacebookOutlined, WhatsApp } from '@mui/icons-material'
 
@@ -48,12 +48,12 @@ const ContactBar = () => {
           
           
          
-          
+{/*           
           
           <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <Instagram className="h-5 w-5 mt-1 hover:text-pink-400" />
           </Link>
-        
+         */}
           </div>
         </div>
       </div>

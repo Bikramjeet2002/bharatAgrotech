@@ -1,31 +1,23 @@
- {
-      "reviews" : [
+{
+  "reviews": [
     {
       "id": 1,
       "product": "Rotavator Blades",
-      "reviewer": "Jagdish Singh",
+      "reviewer": "Jagwinder Singh",
       "rating": 5,
       "profile": "/about/about.jpg",
-      "video":"/testimonial/videos/t1.mp4",
+      "video": "/testimonial/videos/t1.mp4",
       "description": "Excellent quality! The blades are durable and efficient for heavy farming tasks.",
-      "images":[
-        "/testimonial/card.jpg",
-        "/testimonial/rr.jpg"
-
-      ]
+      "images": ["/testimonial/card.jpg", "/testimonial/rr.jpg"]
     },
     {
       "id": 2,
       "product": "Super Seeder Blades",
-      "reviewer": "Rajesh Mehta",
+      "reviewer": "Avtar Singh",
       "rating": 4,
-      "profile": "/testimonial/t1.jpg",
-      "video":"/testimonial/videos/t2.mp4",
-      "images":[
-        "/testimonial/t1.jpg",
-        "/testimonial/t2.jpg"
-
-      ],
+      "profile": "/clients/avatar.avif",
+      "video": "/testimonial/videos/t2.mp4",
+      "images": ["/testimonial/card.jpg", "/testimonial/rr.jpg"],
       "description": "Good performance. Helps in quick seeding with less effort. Worth the investment."
     },
     {
@@ -34,39 +26,9 @@
       "reviewer": "Mehtab Singh",
       "rating": 3,
       "profile": "/clients/avatar.avif",
-      "video":"/testimonial/videos/t1.mp4",
-      "images":[
-        "/testimonial/t1.jpg",
-        "/testimonial/t2.jpg"
-
-      ],
+      "video": "/testimonial/videos/t1.mp4",
+      "images": ["/testimonial/card.jpg", "/testimonial/rr.jpg"],
       "description": "The plow blades work well, but could be slightly sharper for tougher soil."
-    },
-    {
-      "id": 4,
-      "product": "Rotavator Blades",
-      "reviewer": "Amit Singh",
-      "rating": 4,
-      "profile": "/clients/avatar.avif",
-      "video":"/testimonial/videos/t2.mp4",
-      "images":[
-        "/testimonial/t1.jpg",
-        "/testimonial/t2.jpg"
-
-      ],
-      "description": "Very reliable. Made plowing my farm much easier. Some rusting issues after heavy use."
-    },
-    {
-      "id": 5,
-      "product": "Super Seeder Blades",
-      "reviewer": "Ishneet Singh",
-      "rating": 5,
-      "profile": "/clients/avatar.avif",
-      "images":[
-        "/testimonial/t1.jpg",
-        "/testimonial/t2.jpg"
-
-      ],
-      "description": "Amazing product! Increased productivity in seeding operations. Highly recommend."
     }
-  ]}
+  ]
+}

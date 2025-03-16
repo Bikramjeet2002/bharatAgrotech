@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { StarIcon } from "lucide-react";
 
 const Card = ({ product, isRotate = true }) => {
   return (
@@ -14,20 +13,20 @@ const Card = ({ product, isRotate = true }) => {
         <img
           alt={product?.imageAlt}
           src={product?.images[0].url}
-          className="aspect-square w-full h-[70%] rounded-2xl shadow-sm border border-gray-300 bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
+          className="aspect-square w-full h-[65%] rounded-2xl shadow-sm border border-gray-300 bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-[7/8]"
         />
         <div>
           <h3 className="mt-4 text-md font-semibold text-gray-700">
             {product?.name}
           </h3>
-          <p className="line-clamp-1 text-gray-500">
+          <p className="line-clamp-2 mb-2 text-gray-500">
             {product?.shortDescription}
           </p>
-          <p className="mt-1 text-md font-medium inline-flex items-center text-gray-700">
-            {/* Rs{product?.price}  */}
+          <Link to={`/product/${product?.id}`} className=" mt-3 bg-slate-600 hover:bg-slate-700 p-1 px-2   rounded-lg text-white">Show more</Link>
+          {/* <p className="mt-1 text-md font-medium inline-flex items-center text-gray-700">
             <StarIcon className="w-4 h-4" />
             {product?.rating}
-          </p>
+          </p> */}
         </div>
       </Link>
     </div>

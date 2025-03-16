@@ -6,7 +6,7 @@
       "shortDescription": "Durable and high-quality rotavator blade made from Boron Steel, ideal for efficient soil preparation.",
       "images": [
         {
-          "url": "/products/r1.jpg"
+          "url": "/products/RotavatorDouble.jpg"
         }
       ],
       "price": 150,
@@ -28,7 +28,7 @@
       "shortDescription": "Heavy-duty super seeder blades designed for optimal planting and soil performance.",
       "images": [
         {
-          "url": "/products/superseeder.jpg"
+          "url": "/products/Super-seeder.jpg"
         }
       ],
       "price": 180,
@@ -51,7 +51,7 @@
       "shortDescription": "Sturdy cultivator shovel suitable for heavy-duty soil cultivation tasks.",
       "images": [
         {
-          "url": "/products/plow.jpg"
+          "url": "/products/phala.jpg"
         }
       ],
       "price": 200,
@@ -69,11 +69,56 @@
     },
     {
       "id": "product_004",
-      "name": "Rotavator Blade",
+      "name": "Zyrovator Blade",
       "shortDescription": "Durable and high-quality rotavator blade made from Boron Steel, ideal for efficient soil preparation.",
       "images": [
         {
-          "url": "/products/rootawaiter.jpg"
+          "url": "/products/zyrovator.jpg"
+        }
+      ],
+      "price": 150,
+      "rating": 4.5,
+      "specifications": {
+        "Design": "Maschio Type",
+        "Type": "Zyrovator Blades L-Type",
+        "Available_Hole_Sizes": ["12 x 44 mm", " / ", "14 x 44 mm"],
+        "Flat_Size": "70 x 7.5 mm",
+        "Available_Colors": ["Powder Coated Black", " / ", "Blue"],
+        "Packaging_Per_Box": "20 Pieces (10 Left, 10 Right)",
+        "Material_Used": "Boron Steel",
+        "Overall_Length": "265-272 mm"
+      }
+    },
+    {
+      "id": "product_006",
+      "name": "Weeder Blade",
+      "shortDescription": "Heavy-duty Weeder blades designed for optimal planting and soil performance.",
+      "images": [
+        {
+          "url": "/products/weeder-blade.jpg"
+        }
+      ],
+      "price": 180,
+      "rating": 4.7,
+      "specifications": {
+        "Design": ["WB-406", ", ", "WB-356"],
+        "Type": "Weeder Blades J Type",
+        "Available_Hole_Sizes": ["10.5 x 65 mm"],
+        "Flat_Size": ["40 x 6 mm", " / ", "35 x 6 mm"],
+        "Available_Colors": ["Powder Coated Black", " / ", "Blue"],
+        "Packaging_Per_Box": "40 Pieces (20 Left, 20 Right)",
+        "Material_Used": "Boron Steel",
+        "Overall_Length": "250 mm",
+        "Hardness": "40-45 HRC"
+      }
+    },
+    {
+      "id": "product_007",
+      "name": "Rotavator J Type Blade",
+      "shortDescription": "Durable and high-quality rotavator blade made from Boron Steel, ideal for efficient soil preparation.",
+      "images": [
+        {
+          "url": "/products/rr.jpg"
         }
       ],
       "price": 150,
@@ -89,28 +134,26 @@
         "Overall_Length": "270 mm"
       }
     },
-
     {
-      "id": "product_002",
-      "name": "Super Seeder Blade",
-      "shortDescription": "Heavy-duty super seeder blades designed for optimal planting and soil performance.",
+      "id": "product_008",
+      "name": "Reeper Blade",
+      "shortDescription": "Durable and high-quality rotavator blade made from Boron Steel, ideal for efficient soil preparation.",
       "images": [
         {
-          "url": "/products/super.jpg"
+          "url": "/products/reeper.jpg"
         }
       ],
-      "price": 180,
-      "rating": 4.7,
+      "price": 150,
+      "rating": 4.5,
       "specifications": {
-        "Design": ["SS-658", ", ", "SS-707"],
-        "Type": "Super Seeder Blades LJF Type",
+        "Design": "R-119",
+        "Type": "Rotavator Blades L-Type, C-Type",
         "Available_Hole_Sizes": ["14 x 46 mm", ", ", "14 x 57 mm"],
-        "Flat_Size": ["70 x 7 mm", ", ", "65 x 8 mm"],
+        "Flat_Size": "30 x 7 mm",
         "Available_Colors": ["Powder Coated Black", ", ", "Blue"],
         "Packaging_Per_Box": "20 Pieces (10 Left, 10 Right)",
         "Material_Used": "Boron Steel",
-        "Overall_Length": "310 mm",
-        "Hardness": "40-45 HRC"
+        "Overall_Length": "270 mm"
       }
     }
   ]

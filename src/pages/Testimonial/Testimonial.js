@@ -9,34 +9,9 @@ export default function ProfileCards() {
   const [selectedReview, setSelectedReview] = useState(null);
 
   const handleModal = (card) => {
-    setSelectedReview(card)
+    setSelectedReview(card);
     setOpen(true);
   };
-
-  const cards = [
-    {
-      id: 1,
-      name: "Sarah Johnson",
-      image: "/clients/avatar.avif",
-
-      description:
-        "The attention to detail and user experience is outstanding. This product has transformed how our team works together. The interface is intuitive, and the features are exactly what we needed.",
-    },
-    {
-      id: 2,
-      name: "John Doe",
-      image: "/clients/avatar.avif",
-      description:
-        "This product has exceeded expectations. It is easy to use, efficient, and incredibly reliable. I highly recommend it to anyone seeking great performance.",
-    },
-    {
-      id: 3,
-      name: "Alice Smith",
-      image: "/clients/avatar.avif",
-      description:
-        "A fantastic solution for our needs! The features are exactly what we wanted, and the support team has been exceptional.",
-    },
-  ];
 
   return (
     <div className="sm:px-24 px-2">
@@ -60,16 +35,23 @@ export default function ProfileCards() {
               </video>
             </div>
             <div className="flex flex-col w-full gap-4">
-            
               <img
                 className="rounded-lg w-full h-1/2  object-fill"
-                src={selectedReview?.images? selectedReview?.images[0] : "/testimonial/c1.jpg"}
-                alt="Testimonial Image"
+                src={
+                  selectedReview?.images
+                    ? selectedReview?.images[0]
+                    : "/testimonial/card.jpg"
+                }
+                alt="TestimonialImage"
               />
               <img
                 className="rounded-lg w-full h-1/2 object-fill"
-                src={ selectedReview?.images? selectedReview?.images[1]:"/testimonial/c1.jpg"}
-                alt="Testimonial Image"
+                src={
+                  selectedReview?.images
+                    ? selectedReview?.images[1]
+                    : "/testimonial/rr.jpg"
+                }
+                alt="TestimonialImage"
               />
             </div>
           </div>
@@ -80,7 +62,6 @@ export default function ProfileCards() {
           <hr />
         </div>
         <div className="flex justify-center">
-          {console.log(review)}
           <h1 className="font-semibold px-4 -top-5 bg-white relative text-gray-600 text-2xl">
             Testimonials
           </h1>
@@ -99,7 +80,7 @@ export default function ProfileCards() {
             <div className="flex flex-col items-center">
               <div className="w-28 h-28 mb-4">
                 <img
-                  src={card?.profile  ? card?.profile : "/clients/avatar.avif"}
+                  src={card?.profile ? card?.profile : "/clients/avatar.avif"}
                   alt={card.name}
                   className="w-full h-full rounded-full border-2 border-gray-500 object-cover"
                 />
@@ -111,7 +92,7 @@ export default function ProfileCards() {
                 {card.description}
               </p>
               <button
-                onClick={()=>handleModal(card)}
+                onClick={() => handleModal(card)}
                 className="mt-6 px-6 py-2 bg-gray-600 text-white font-semibold rounded-lg shadow-md hover:bg-gray-700 transition"
               >
                 Show More

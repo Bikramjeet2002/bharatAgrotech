@@ -6,7 +6,7 @@ import "swiper/css/autoplay";
 import { useState } from "react";
 
 export default () => {
-  const [data, setData] = useState([
+  const [data] = useState([
     {
       image: "/clients/dashmesh-logo.png",
     },
@@ -55,9 +55,9 @@ export default () => {
         //   onSlideChange={() => console.log('slide change')}
         //   onSwiper={(swiper) => console.log(swiper)}
       >
-        {data?.map((brand, i) => (
+        {data?.map((brand, index) => (
           <SwiperSlide
-            key={i}
+            key={index}
             className="py-4 flex items-center justify-center"
           >
             <div className="flex w-full items-center justify-center">

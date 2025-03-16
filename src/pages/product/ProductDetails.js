@@ -6,7 +6,7 @@ const ProductDetailsPage = () => {
   const { id } = useParams();
   const products = items.products;
 
-  const product = products.find((item) => item.id == id);
+  const product = products.find((item) => item.id === id);
 
   if (!product) {
     return <div className="text-center text-red-500">Product not found</div>;

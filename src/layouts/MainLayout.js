@@ -21,7 +21,7 @@ const MainLayout = () => {
   return (
     <div className="2xl:container mx-auto">
       <ContactBar />
-      {pathname == "/" ? <Navbar /> : <Dashboard />}
+      {pathname === "/" ? <Navbar /> : <Dashboard />}
       <main>
         <Outlet />
         {/* <div className="z-50"> 

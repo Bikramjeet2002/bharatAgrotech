@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import { Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
 import { WhatsApp } from "@mui/icons-material";
 
@@ -9,13 +9,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="mb-8 md:mb-0">
-            <div>
+            <Link to={'/'}>
               <img
                 alt="Your Company"
                 src="/logo/Batlogo.png"
                 className="size-20 px-1"
               />
-            </div>
+            </Link>
             <h2 className="text-2xl font-bold mb-4">Bharat Agro Tech</h2>
             <p className="text-gray-400">
               We are dedicated to providing the best service to our customers.
@@ -45,7 +45,7 @@ const Footer = () => {
                   to="/product"
                   className="hover:text-gray-300 transition duration-300"
                 >
-                Products
+                  Products
                 </Link>
               </li>
               <li>
@@ -77,15 +77,19 @@ const Footer = () => {
             >
               Email: bhaaratagrotech@gmail.com
             </a>
-
+            <br />
             <Link to="tel:9814551819" className="text-gray-400">
-              Phone: 9814551819
+              Phone: 9814551819 , 
+            </Link>
+            <Link to="tel:9888503966" className="text-gray-400 ml-1">
+                9888503966
             </Link>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <Link  to="https://www.facebook.com/bhaaratagrotech"
+              <Link
+                to="https://www.facebook.com/bhaaratagrotech"
                 className="text-gray-400 hover:text-white transition duration-300"
               >
                 <Facebook className="w-6 h-6" />
@@ -96,22 +100,15 @@ const Footer = () => {
                 className="text-gray-400 hover:text-white transition duration-300"
               >
                 <WhatsApp className="w-6 h-6" />
-                
               </Link>
-              <a
-                href="#"
+              {/* <Link
+                to="#"
                 className="text-gray-400 hover:text-white transition duration-300"
               >
                 <Instagram className="w-6 h-6" />
                 <span className="sr-only">Instagram</span>
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition duration-300"
-              >
-                <Linkedin className="w-6 h-6" />
-                <span className="sr-only">LinkedIn</span>
-              </a>
+              </Link> */}
+          
             </div>
           </div>
         </div>

@@ -60,7 +60,7 @@ const ProductDetailsPage = () => {
               <div className= "items-center "><i className="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp</div>
             </Link>
             <Link
-              to="tel:+919815451819"
+              to="tel:+919814551819"
               className=" flex items-center  justify-center p-2 lg:p-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition"
             >
               <i className="fa-solid fa-phone text-lg mr-2"></i> Call Now

@@ -68,9 +68,9 @@ const Footer = () => {
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p className="text-gray-400">Peer Gajju Shah Road </p>
-            <p className="text-gray-400">Mandi Gobindgarh Punjab ,</p>
-            <p className="text-gray-400">147301</p>
+            <p className="text-gray-400">Amloh - Mandi Gobindgarh Rd,</p>
+            <p className="text-gray-400">near Haryana Mill,</p>
+            <p className="text-gray-400">Mandi Gobindgarh, 147301, PB, IN</p>
             <a
               href="mailto: bhaaratagrotech@gmail.com"
               className="text-gray-400 hover:underline"

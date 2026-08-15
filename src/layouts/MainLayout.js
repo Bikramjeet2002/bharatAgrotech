@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 import ContactBar from "../components/ContactBar";
 import Dashboard from "../components/Dashboard";
 import AOS from "aos";
-import Whatsapp from "../components/Whatsapp";
+// import Whatsapp from "../components/Whatsapp";
 
 const MainLayout = () => {
   const { pathname } = useLocation();
@@ -25,8 +25,8 @@ const MainLayout = () => {
       <main>
         <Outlet />
         {/* <div className="z-50"> 
-              <Whatsapp/>
-            </div> */}
+          <Whatsapp />
+        </div> */}
       </main>
       <Footer />
     </div>

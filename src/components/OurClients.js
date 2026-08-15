@@ -1,11 +1,11 @@
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/autoplay";
-import { useState } from "react";
 
-export default () => {
+const OurClients = () => {
   const [data] = useState([
     {
       image: "/clients/dashmesh-logo.png",
@@ -29,7 +29,6 @@ export default () => {
 
   return (
     <>
-      {" "}
       <Swiper
         modules={[Autoplay]}
         slidesPerView={2}
@@ -52,8 +51,6 @@ export default () => {
             spaceBetween: "20px",
           },
         }}
-        //   onSlideChange={() => console.log('slide change')}
-        //   onSwiper={(swiper) => console.log(swiper)}
       >
         {data?.map((brand, index) => (
           <SwiperSlide
@@ -64,7 +61,7 @@ export default () => {
               <img
                 className="w-[150px] h-[150px] object-contain object-center"
                 src={brand?.image}
-                alt="..."
+                alt="Client logo"
               />
             </div>
           </SwiperSlide>
@@ -73,3 +70,5 @@ export default () => {
     </>
   );
 };
+
+export default OurClients;
